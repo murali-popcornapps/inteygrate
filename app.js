@@ -12,7 +12,7 @@ var routes = require('./routes/index');
 var app = express();
 var server = require('http').Server(app);
 // attach socket.io and listen
-var io = require('socket.io')(server);
+var io = require('socket.io')(server,{allowEIO3: true});
 // get a reference to the socket once a client connects
 var socket = io.sockets.on('connection', function (socket) { });
 
